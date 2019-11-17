@@ -8,7 +8,7 @@ namespace DatingApp.Helper
         {
             response.Headers.Add("Application-Error", message);
             response.Headers.Add("Access-Control-Expose-Header", "Application-Error");
-            response.Headers.Add("Access-Controll-Origin", "*");
+            response.Headers.Add("Access-Control-Allow-Origin", "*");
         }
     }
 }
