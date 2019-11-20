@@ -22,7 +22,6 @@ namespace DatingApp.Controllers
         {
             _config = config;
             _repo = repo;
-
         }
 
         [HttpPost("register")]
@@ -42,8 +41,6 @@ namespace DatingApp.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
-
-
             // throw new Exception ("Computer says no!");
             var userForRepo = await _repo.Login(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
             if (userForRepo == null)

@@ -19,6 +19,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using DatingApp.Helper;
+using AutoMapper;
 
 namespace DatingApp {
     public class Startup {
@@ -29,11 +30,21 @@ namespace DatingApp {
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices (IServiceCollection services) {
+        public void ConfigureServices (IServiceCollection services) 
+        {
+
             services.AddDbContext<DataContext> (x => x.UseSqlite (Configuration.GetConnectionString ("DataContext")));
-            services.AddMvc ().SetCompatibilityVersion (CompatibilityVersion.Version_2_2);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+                .AddJsonOptions(Options =>
+                {
+                    Options.SerializerSettings.ReferenceLoopHandling =
+                     Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                });
             services.AddCors ();
+            services.AddAutoMapper();
+            services.AddTransient<Seed>();
             services.AddScoped<IAuthRepository, AuthRepository> ();
+            services.AddScoped<IDatingRepository, DatingRepository>();
             services.AddAuthentication (JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer (Options => {
                     Options.TokenValidationParameters = new TokenValidationParameters {
@@ -47,7 +58,7 @@ namespace DatingApp {
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure (IApplicationBuilder app, IHostingEnvironment env) {
+        public void Configure (IApplicationBuilder app, IHostingEnvironment env, Seed seeder) {
             if (env.IsDevelopment ()) {
                 app.UseDeveloperExceptionPage ();
             } else {
@@ -67,6 +78,7 @@ namespace DatingApp {
             }
 
             // app.UseHttpsRedirection();
+            // seeder.SeedUser();
             app.UseCors (x => x.AllowAnyOrigin ().AllowAnyMethod ().AllowAnyHeader ());
             app.UseAuthentication ();
             app.UseMvc ();
