@@ -33,7 +33,8 @@ namespace DatingApp {
         public void ConfigureServices (IServiceCollection services) 
         {
 
-            services.AddDbContext<DataContext> (x => x.UseSqlite (Configuration.GetConnectionString ("DataContext")));
+            services.AddDbContext<DataContext> (x => x.UseSqlite (Configuration.GetConnectionString ("SqlLiteDataContext")));
+            // services.AddDbContext<DataContext> (x => x.UseSqlServer (Configuration.GetConnectionString ("SqlServerDataContext")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
                 .AddJsonOptions(Options =>
                 {
