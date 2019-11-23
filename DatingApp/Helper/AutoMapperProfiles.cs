@@ -10,7 +10,7 @@ namespace DatingApp.Helper
     {
         public AutoMapperProfiles()
         {
-            CreateMap<User, UserForListDtos>()
+            CreateMap<User, UserForListDto>()
                 .ForMember(dest => dest.PhotoUrl, opt =>
                 {
                     opt.MapFrom(src => src.Photos.FirstOrDefault(p => p.IsMain).Url);
