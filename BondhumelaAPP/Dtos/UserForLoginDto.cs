@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace BondhuMela.Dtos {
+namespace BondhumelaApp.Dtos {
     public class UserForLoginDto {
         [Required]
         public string Username { get; set; }

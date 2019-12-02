@@ -1,10 +1,10 @@
 ﻿using System.Threading.Tasks;
-using BondhuMela.Data;
+using BondhumelaApp.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace BondhuMela.Controllers
+namespace BondhumelaApp.Controllers
 {
     [Authorize]
     [Route ("api/[controller]")]

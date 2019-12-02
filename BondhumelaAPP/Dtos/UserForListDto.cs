@@ -1,6 +1,6 @@
 using System;
 
-namespace BondhuMela.Dtos
+namespace BondhumelaApp.Dtos
 {
     public class UserForListDto
     {

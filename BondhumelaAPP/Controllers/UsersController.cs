@@ -1,21 +1,21 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
-using BondhuMela.Data;
-using BondhuMela.Dtos;
+using BondhumelaApp.Data;
+using BondhumelaApp.Dtos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BondhuMela.Controllers
+namespace BondhumelaApp.Controllers
 {
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : Controller
     {
-        private readonly IDatingRepository _repo;
+        private readonly IBondhumelaRepository _repo;
         private readonly IMapper _mapper;
-        public UsersController(IDatingRepository repo, IMapper mapper)
+        public UsersController(IBondhumelaRepository repo, IMapper mapper)
         {
             _mapper = mapper;
             _repo = repo;

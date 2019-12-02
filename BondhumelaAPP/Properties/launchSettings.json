@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Bondhumela.": {
+    "BondhumelaApp.": {
       "commandName": "Project",
       "launchBrowser": false,
       "launchUrl": "api/values",

@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
-using BondhuMela.Models;
+using BondhumelaApp.Models;
 
-namespace BondhuMela.Data {
+namespace BondhumelaApp.Data {
     public interface IAuthRepository {
         Task<User> Register (User user, string password);
         Task<User> Login (string username, string password);

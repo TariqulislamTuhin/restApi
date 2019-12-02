@@ -1,10 +1,10 @@
 using System.Linq;
 using System;
 using AutoMapper;
-using BondhuMela.Dtos;
-using BondhuMela.Models;
+using BondhumelaApp.Dtos;
+using BondhumelaApp.Models;
 
-namespace BondhuMela.Helper
+namespace BondhumelaApp.Helper
 {
     public class AutoMapperProfiles : Profile
     {

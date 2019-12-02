@@ -3,14 +3,14 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using BondhuMela.Data;
-using BondhuMela.Dtos;
-using BondhuMela.Models;
+using BondhumelaApp.Data;
+using BondhumelaApp.Dtos;
+using BondhumelaApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
-namespace BondhuMela.Controllers
+namespace BondhumelaApp.Controllers
 {
 
     [Route("api/[controller]")]

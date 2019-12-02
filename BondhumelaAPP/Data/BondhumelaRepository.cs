@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using BondhuMela.Models;
+using BondhumelaApp.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BondhuMela.Data
+namespace BondhumelaApp.Data
 {
-    public class DatingRepository : IDatingRepository
+    public class BondhumelaRepository : IBondhumelaRepository
     {
         private readonly DataContext _context;
-        public DatingRepository(DataContext context)
+        public BondhumelaRepository(DataContext context)
         {
             _context = context;
 

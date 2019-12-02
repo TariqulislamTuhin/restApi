@@ -1,7 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Http;
 
-namespace BondhuMela.Helper
+namespace BondhumelaApp.Helper
 {
     public static class Extentions
     {

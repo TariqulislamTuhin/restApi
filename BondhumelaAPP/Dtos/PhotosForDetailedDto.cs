@@ -1,7 +1,7 @@
 using System;
-using BondhuMela.Models;
+using BondhumelaApp.Models;
 
-namespace BondhuMela.Dtos
+namespace BondhumelaApp.Dtos
 {
     public class PhotosForDetailedDto
     {

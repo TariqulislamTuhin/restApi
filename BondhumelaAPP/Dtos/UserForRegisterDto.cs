@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace BondhuMela.Dtos
+namespace BondhumelaApp.Dtos
 {
     public class UserForRegisterDto
     {

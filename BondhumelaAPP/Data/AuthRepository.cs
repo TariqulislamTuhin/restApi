@@ -1,9 +1,9 @@
 using System;
 using System.Threading.Tasks;
-using BondhuMela.Models;
+using BondhumelaApp.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BondhuMela.Data {
+namespace BondhumelaApp.Data {
     public class AuthRepository : IAuthRepository {
         private readonly DataContext _context;
 

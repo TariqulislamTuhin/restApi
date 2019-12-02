@@ -2,12 +2,12 @@
 
   <div  class="container">
 
-    <a *ngIf="!loggedIn()" class="navbar-brand" [routerLink]="['/home']">Soul Mate</a>
+    <a *ngIf="!loggedIn()" class="navbar-brand" [routerLink]="['/home']">Bondhu Mela</a>
     
 
     <ul *ngIf="loggedIn()" class="navbar-nav mr-auto">
       <li class="nav-item" routerLinkActive="active">
-        <a class="navbar-brand font-weight-bold" [routerLink]="['/members']" (click)="setTitle('Soul Mate - Home')">Soul Mate </a>
+        <a class="navbar-brand font-weight-bold" [routerLink]="['/members']" (click)="setTitle('Soul Mate - Home')">Bondhu Mela</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['/members']" (click)="setTitle('Soul Mate - Matches')">Matches </a>

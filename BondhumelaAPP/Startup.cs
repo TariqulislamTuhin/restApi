@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BondhuMela.Data;
+using BondhumelaApp.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -18,10 +18,10 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
-using BondhuMela.Helper;
+using BondhumelaApp.Helper;
 using AutoMapper;
 
-namespace BondhuMela {
+namespace BondhumelaApp {
     public class Startup {
         public Startup (IConfiguration configuration) {
             Configuration = configuration;
@@ -45,7 +45,7 @@ namespace BondhuMela {
             services.AddAutoMapper();
             services.AddTransient<Seed>();
             services.AddScoped<IAuthRepository, AuthRepository> ();
-            services.AddScoped<IDatingRepository, DatingRepository>();
+            services.AddScoped<IBondhumelaRepository, BondhumelaRepository>();
             services.AddAuthentication (JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer (Options => {
                     Options.TokenValidationParameters = new TokenValidationParameters {

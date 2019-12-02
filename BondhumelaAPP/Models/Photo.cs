@@ -1,6 +1,6 @@
 using System;
 
-namespace BondhuMela.Models
+namespace BondhumelaApp.Models
 {
     public class Photo
     {

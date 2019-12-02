@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using BondhuMela.Models;
+using BondhumelaApp.Models;
 using Newtonsoft.Json;
 
-namespace BondhuMela.Data
+namespace BondhumelaApp.Data
 {
     public class Seed
     {

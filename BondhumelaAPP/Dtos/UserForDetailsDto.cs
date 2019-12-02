@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using BondhuMela.Models;
+using BondhumelaApp.Models;
 
-namespace BondhuMela.Dtos
+namespace BondhumelaApp.Dtos
 {
     public class UserForDetailsDto
     {
