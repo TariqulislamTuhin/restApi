@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace DatingApp.Migrations
+namespace BondhuMelaAPP.Migrations
 {
     public partial class initialMigrations : Migration
     {

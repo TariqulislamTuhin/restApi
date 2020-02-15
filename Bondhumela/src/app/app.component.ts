@@ -20,6 +20,6 @@ export class AppComponent implements OnInit {
     if (token) {
       this.authService.decodedToken = this.jwtHelper.decodeToken(token);
     }
-    this.titleService.setTitle('Soul Mate');
+    this.titleService.setTitle('Bondhu Mela');
   }
 }

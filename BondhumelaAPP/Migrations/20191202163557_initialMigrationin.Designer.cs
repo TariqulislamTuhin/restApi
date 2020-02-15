@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BondhuMelaAPP.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20191202153829_initialMigrations")]
-    partial class initialMigrations
+    [Migration("20191202163557_initialMigrationin")]
+    partial class initialMigrationin
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

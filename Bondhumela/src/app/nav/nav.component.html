@@ -7,23 +7,23 @@
 
     <ul *ngIf="loggedIn()" class="navbar-nav mr-auto">
       <li class="nav-item" routerLinkActive="active">
-        <a class="navbar-brand font-weight-bold" [routerLink]="['/members']" (click)="setTitle('Soul Mate - Home')">Bondhu Mela</a>
+        <a class="navbar-brand font-weight-bold" [routerLink]="['/members']" (click)="setTitle('Bondhu Mela - Home')">Bondhu Mela</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/members']" (click)="setTitle('Soul Mate - Matches')">Matches </a>
+        <a class="nav-link" [routerLink]="['/members']" (click)="setTitle('Bondhu Mela - Matches')">Matches </a>
       </li>
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/lists']" (click)="setTitle('Soul Mate - Lists')">Lists</a>
+        <a class="nav-link" [routerLink]="['/lists']" (click)="setTitle('Bondhu Mela - Lists')">Lists</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/messages']" (click)="setTitle('Soul Mate - Messages')">Message</a>
+        <a class="nav-link" [routerLink]="['/messages']" (click)="setTitle('Bondhu Mela - Messages')">Message</a>
       </li>
     </ul>
 
     <div *ngIf="loggedIn()" class="dropdown" dropdown>
       <a class="dropdown-toggle text-light" dropdownToggle> Welcome {{authService.decodedToken.unique_name | titlecase}}</a>
       <div class="dropdown-menu mt-3" *bsDropdownMenu>
-        <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Edit Profile</a>
+        <a class="dropdown-item" [routerLink]="['/member/edit']" ><i class="fa fa-user"></i> Edit Profile</a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" (click)="logout()"><i class="fa fa-sign-out"></i> Logout </a>
       </div>
